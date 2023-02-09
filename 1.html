@@ -3,21 +3,15 @@
 <head>
 <title>1.스토브리그</title>
 <meta charset="utf-8">
+<script
+src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.2.js"></script>
+<script src="colors.js"></script>
 </head>
 <body>
   <h1><a href="index.html"  target="_blank" >내가 좋아하는 드라마</a></h1>
-<input id="night_day" type="button" value="night" onclick="
- if(document.querySelector('#night_day').value === 'night'){
-  document.querySelector('body').style.backgroundColor = 'black';
-  document.querySelector('body').style.color =  'white';
-  document.querySelector('#night_day').value = 'day';
- } else {
-  document.querySelector('body').style.backgroundColor = 'white';
-  document.querySelector('body').style.color = 'black';
-  document.querySelector('#night_day').value = 'night';
- }
- ">
-
+  <input type="button" value="night" onclick="
+ nightDayHandler(this);
+">
 <ol>
   <li><a href="1.html" target="_blank">스토브리그</a></li>
   <li><a href="2.html" target="_blank">브람스를 좋아하세요?</a></li>
@@ -69,6 +63,7 @@ allowfullscreen></iframe>
   이들은 꼴지에서 2등만 해도 웃을 수 있다. 불가피하게 어딘가 존재하는
   꼴찌들이 기죽지 않는 판타지를 꿈꾸며 이야기를 쓰고 있다.</p><br>
 
+-
 <p>
   <div id="disqus_thread"></div>
   <script>
